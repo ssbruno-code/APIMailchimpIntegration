@@ -35,11 +35,11 @@ app.post("/", function(req, res) {
 
   const jsonData = JSON.stringify(data);
 
-  const url = "https://us6.api.mailchimp.com/3.0/lists/46f443ffe0";
+  const url = "Your Mailchimp List URL Here";
 
   const options = {
     method: "POST",
-    auth: "bruno:58c89b75c5e09281e9c89d480e54b089-us6"
+    auth: "Your Mailchimp API Key Here"
   };
 
   const request = https.request(url, options, function(response) {
@@ -64,8 +64,4 @@ app.listen(process.env.PORT || 3000, function() {
 });
 
 
-//API Key Mailchimp:
-// 58c89b75c5e09281e9c89d480e54b089-us6
 
-//List
-// 46f443ffe0
